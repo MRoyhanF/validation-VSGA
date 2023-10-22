@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>PENDAFTARAN BEASISWA</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<section class="section dashboard">
+    <div class="row">
+  
+      <!-- Left side columns -->
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <a href="index.html" class="m-0 font-weight-bold float-right btn btn-primary">Kembali</a>
+            </div>
+          <section id="message">
+               <form action="" method="POST">
+                    <div class="form-output">
+                         <div class="card-body pb-5">
+                             <table class="table datatable" width="100%" cellspacing="0">
+                     <tr>
+                         <th>Nama</th>
+                         <td><span id="sender-full-name" ></span></td>
+                     </tr>
+                     <tr>
+                         <th>Email</th>
+                         <td><span id="sender-email"></span></td>
+                     </tr>
+                     <tr>
+                         <th>Nomer HP</th>
+                         <td><span id="sender-hp"></span></td>
+                     </tr>
+                     <tr>
+                        <th>semester</th>
+                        <td><span id="sender-semester"></span></td>
+                    </tr>
+                    <tr>
+                         <th>IPK</th>
+                         <td><span id="sender-ipk"></span></td>
+                    </tr>
+                    <tr>
+                         <th>Jurusan</th>
+                         <td><span id="sender-jurusan"></span></td>
+                    </tr>
+                    <tr>
+                         <th>Berkas</th>
+                         <td><span id="sender-berkas"></span></td>
+                    </tr>
+                    <tr>
+                         <th>Status Ajuan</th>
+                         <td><span id="" style="color: red;">Belum Di verifikasi</span></td>
+                    </tr>
+                         </table>
+                    </div>
+                     </div>
+                 </form>
+          </section>
+            
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+  
+      </div>
+    </div>
+  
+  </section>
+</body>
+<script>
+              // Ambil data dari sessionStorage dan tampilkan
+    const name = sessionStorage.getItem("name");
+    const email = sessionStorage.getItem("email");
+    const hp = sessionStorage.getItem("hp");
+    const semester = sessionStorage.getItem("semester");
+    const ipk = sessionStorage.getItem("ipk");
+    const jurusan = sessionStorage.getItem("jurusan");
+    const berkas = sessionStorage.getItem("berkas");
+
+    document.getElementById("sender-full-name").textContent = name;
+    document.getElementById("sender-email").textContent = email;
+    document.getElementById("sender-hp").textContent = hp;
+    document.getElementById("sender-semester").textContent = semester;
+    document.getElementById("sender-ipk").textContent = ipk;
+    document.getElementById("sender-jurusan").textContent = jurusan;
+    document.getElementById("sender-berkas").textContent = berkas;
+
+</script>
+</html>
